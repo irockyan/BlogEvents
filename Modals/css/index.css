@@ -1,0 +1,44 @@
+/*变量*/
+
+:root{
+    --border-color: #ddd;
+}
+
+/*一些公用板块*/
+
+.c-disappear{
+    display: none;
+}
+
+.c-appear{
+    display: block;
+}
+
+/*页面修饰*/
+.modals{
+    width: 300px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.modals h1{
+    font-size: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modals p{
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.modals button{
+    background: #333;
+    color: #fff;
+    display: block;
+    padding: 5px 10px;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
