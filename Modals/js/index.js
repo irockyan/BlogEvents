@@ -4,17 +4,36 @@ const $ = (sel) => {
   return document.querySelector(sel);
 }
 
-$('.popup').addEventListener('click', function () {
-  this.classList.add('c-disappear');
-  $('.modals').classList.add('c-appear');
-})
+(function () {
+  class Modals {
+    constructor(text) {
+      this.text = text;
+    }
 
-$('.know').addEventListener('click', function () {
-  $('.modals').classList.remove('c-appear');
-  $('.popup').classList.remove('c-disappear');
-})
+    init() {
+      $('.modals p').innerHTML = this.text;
+      this.initDom();
+      this.initEvent();
+    }
 
+    initDom() {
 
-// (function(){
+    }
 
-// })()
+    initEvent() {
+      $('.know').addEventListener('click', () => {
+        this.hide();
+      })
+    }
+
+    show() {
+      $('.modals').classList.add('c-appear');
+    }
+
+    hide() {
+      $('.modals').classList.remove('c-appear');
+    }
+  }
+
+  window.Modals = Modals;
+})()
