@@ -6,7 +6,7 @@
 
 ## 案例
 
-1. [图片画廊](./Gallery)
+1. [图片画廊](./Gallery/Readme.md)
 
 ## 博客专用
 
