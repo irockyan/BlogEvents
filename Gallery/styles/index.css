@@ -2,3 +2,10 @@ img{
   width: 400px;
   height: 300px;
 }
+
+.intro{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 30px;
+}
