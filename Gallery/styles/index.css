@@ -1,4 +1,27 @@
+body{
+  background-color: #ccc;
+  color: #333;
+  margin: 1em 10%;
+}
+
+h1{
+  color: #333;
+}
+
+a{
+  color: #c60;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+li{
+  float: left;
+  padding: 1em;
+}
+
 img{
   width: 400px;
   height: 300px;
+  display: block;
+  clear: both;
 }
