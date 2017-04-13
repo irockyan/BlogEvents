@@ -1,0 +1,17 @@
+body {
+  position: relative;
+}
+
+p {
+  text-align: center;
+}
+
+.ad {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100px;
+  height: 50px;
+  /*transform: translateY(-50%);*/
+  background-color: #f40;
+}

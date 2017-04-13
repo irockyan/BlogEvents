@@ -1,0 +1,38 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+p,
+dd {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+button,input{
+    outline: none;
+}
+
+button {
+    border: none;
+}
+
+input {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+div {
+    box-sizing: border-box;
+}
