@@ -1,5 +1,7 @@
 const oLi = document.getElementsByClassName('ol');
 
+console.log(oLi[0].nodeType);
+
 const nodeList = oLi[0].children;
 
 
@@ -12,8 +14,10 @@ for (let i = 0; i < nodeList.length; i++) {
 }
 
 function showPic(whichPic) {
-  const img = document.getElementsByTagName('img')[0];
-  console.log(whichPic);
-  const source = whichPic.getAttribute('href');
+  const img = document.getElementsByTagName('img')[0],
+    descNode = document.querySelector('p');
+  const source = whichPic.getAttribute('href'),
+    text = whichPic.getAttribute('title');
   img.setAttribute('src', source);
+  descNode.firstChild.nodeValue = text;
 }
