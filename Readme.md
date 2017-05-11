@@ -12,7 +12,7 @@
 ## 案例
 
 1. [图片画廊](./Gallery/)
-1. [Building Social](./Building Social/index.html)
+1. [Building Social](./Building Social)
 
 ## 博客专用
 
