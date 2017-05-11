@@ -27,7 +27,9 @@ body {
   width: 100%;
   bottom: -10vw;
   animation: animate_options 21s linear infinite;
+ opacity: 0; transition: all .3s ease; 
 }
+.list-options li.current { bottom: 0; opacity: 1; }
 
 .list-options li:nth-child(1) {
   animation-delay: 0s;
@@ -61,7 +63,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);
+  transform: translate(-50%,-50%);
   z-index: 3;
   font-size: 3.6vw;
   font-weight: 300;
