@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>复杂页面的滑动门</title>
+    <style>
+    body,ul{
+        margin: 0;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        float: left;
+    }
+    a,span{
+        display: inline-block;
+        height: 35px;
+    }
+    a{
+        background: url('./images/bg_r1_c1.png') no-repeat;
+        line-height: 35px;
+        padding-left: 7px;
+    }
+    span{
+        background: url('./images/bg_r1_c2.png') right;
+        padding-right: 22px;
+    }
+    a:hover{
+        background: url('./images/bbg_r1_c1.png') no-repeat;
+    }
+    span:hover{
+        background: url('./images/bbg_r1_c2.png') right;
+    }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#"><span>第一个</span></a></li>
+        <li><a href="#"><span>第二个案例</span></a></li>
+        <li><a href="#"><span>第三个你猜猜是啥</span></a></li>
+        <li><a href="#"><span>第四个你猜对没有啊哈哈哈fasdfafaf</span></a></li>
+    </ul>
+</body>
+</html>
