@@ -1,6 +1,6 @@
 .w{
   margin: 0 auto;
-  width: 1210px;
+  width: 1190px;
 }
 
 .fl{
@@ -11,8 +11,24 @@
   float: right;
 }
 
+
+/*网站导航*/
 .site-nav{
   height: 30px;
   line-height: 30px;
   background-color: #E3E4E5;
+}
+.site-nav-place{
+  padding: 0 10px;
+}
+.site-nav-place i{
+  color: #F10215;
+  font-size: 14px;
+}
+.site-nav-place:hover{
+  background-color: #fff;
+}
+
+body{
+  font-size: 12px;
 }
