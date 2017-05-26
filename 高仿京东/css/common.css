@@ -11,6 +11,10 @@
   float: right;
 }
 
+body{
+  font-size: 12px;
+}
+
 
 /*网站导航*/
 .site-nav{
@@ -28,7 +32,29 @@
 .site-nav-place:hover{
   background-color: #fff;
 }
-
-body{
-  font-size: 12px;
+.site-nav-lists ul li{
+  float: left;
+  padding: 0 10px;
+}
+.cw:hover{
+  background-color: #fff;
+}
+.site-nav-lists .cw a:hover{
+  color: #999;
+}
+.site-nav-lists ul li a:hover{
+  color: #f10215;
+}
+.site-nav-lists ul li a{
+  color: #999;
+}
+.site-nav-lists .line{
+  width: 1px;
+  height: 12px;
+  background-color: #ccc;
+  margin: 9px 5px;
+  padding: 0;
+}
+.site-nav-lists .register{
+  color: #f10215;
 }
