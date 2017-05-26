@@ -1,0 +1,18 @@
+.w{
+  margin: 0 auto;
+  width: 1210px;
+}
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.site-nav{
+  height: 30px;
+  line-height: 30px;
+  background-color: #E3E4E5;
+}
