@@ -58,3 +58,24 @@ body{
 .site-nav-lists .register{
   color: #f10215;
 }
+
+.ad{
+  background-color: #83178E;
+}
+.ad>div{
+  position: relative;
+}
+.close-btn{
+  position: absolute;
+  background-color: rgb(45, 45, 45);
+  opacity: .3;
+  width: 20px;
+  line-height: 20px;
+  top: 5px;
+  right: 5px;
+  text-align: center;
+}
+.ad .close{
+  color: #fff;
+  font-size: 14px;
+}
