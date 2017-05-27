@@ -13,6 +13,7 @@
 
 body{
   font-size: 12px;
+  background-color: #F6F6F6;
 }
 
 
@@ -24,6 +25,7 @@ body{
 }
 .site-nav-place{
   padding: 0 10px;
+  margin-left: 200px;
 }
 .site-nav-place i{
   color: #F10215;
@@ -78,4 +80,76 @@ body{
 .ad .close{
   color: #fff;
   font-size: 14px;
+}
+
+.search{
+  position: relative;
+}
+.search-logo{
+  position: absolute;
+  top: -30px;
+  left: 0;
+}
+.search-logo img{
+  height: 170px;
+  width: 190px;
+}
+.search-input{
+  position: absolute;
+  top: 25px;
+  left: 320px;
+}
+.search-input input{
+  height: 32px;
+  width: 500px;
+  border: 1px solid #F10215;
+  padding: 0 44px 0 2px; 
+}
+.search-input button{
+  height: 32px;
+  width: 52px;
+  background-color: #f10215;
+  color: #fff;
+}
+.xiangji{
+  position: absolute;
+  right: 60px;
+  top: 7px;
+  color: #999;
+}
+.search-more{
+  position: absolute;
+  top: 60px;
+  left: 320px;
+  height: 32px;
+  width: 552px;
+}
+.shopping-cart{
+  position: absolute;
+  right: 100px;
+  top: 25px;
+  height: 35px;
+  width: 188px;
+  text-align: center;
+  line-height: 35px;
+  border: 1px solid #bbb;
+  color: #f10215
+}
+.shopping-cart span:nth-of-type(1){
+  font-size: 16px;
+}
+.shopping-cart span:nth-of-type(3){
+  position: absolute;
+  background-color: #f10215;
+  color: #fff;
+  top: 0px;
+  right: 40px;
+  height: 15px;
+  width: 13px;
+  line-height: 15px;
+  border-radius: 8px;
+}
+.search-more li{
+  float: left;
+  padding: 10px 12px 0 0;
 }

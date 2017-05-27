@@ -40,8 +40,13 @@ input {
   -webkit-tap-highlight-color: transparent;
 }
 
+input,button{
+  vertical-align: middle;
+}
+
 button,
-div {
+div,
+input {
   box-sizing: border-box;
 }
 

@@ -1,10 +1,10 @@
 
 @font-face {font-family: "iconfont";
-  src: url('iconfont.eot?t=1495862395247'); /* IE9*/
-  src: url('iconfont.eot?t=1495862395247#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('iconfont.woff?t=1495862395247') format('woff'), /* chrome, firefox */
-  url('iconfont.ttf?t=1495862395247') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('iconfont.svg?t=1495862395247#iconfont') format('svg'); /* iOS 4.1- */
+  src: url('iconfont.eot?t=1495868145851'); /* IE9*/
+  src: url('iconfont.eot?t=1495868145851#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('iconfont.woff?t=1495868145851') format('woff'), /* chrome, firefox */
+  url('iconfont.ttf?t=1495868145851') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('iconfont.svg?t=1495868145851#iconfont') format('svg'); /* iOS 4.1- */
 }
 
 .iconfont {
@@ -17,7 +17,13 @@
 
 .icon-dingwei:before { content: "\f0039"; }
 
+.icon-xiangji:before { content: "\f0058"; }
+
+.icon-gouwuche:before { content: "\f0082"; }
+
 .icon-tubiao10:before { content: "\e6ea"; }
 
 .icon-guanbi:before { content: "\e611"; }
+
+.icon-search:before { content: "\e511"; }
 
