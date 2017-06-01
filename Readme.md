@@ -15,6 +15,7 @@
 1. [BuildingSocial](./BuildingSocial/index.html)
 1. [滑动门](./滑动门)
 1. [高仿京东](./高仿京东)
+1. [代码片段](./codeSnippets)
 
 ## 博客专用
 
