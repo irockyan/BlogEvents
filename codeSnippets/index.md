@@ -15,6 +15,10 @@ console.log(`${a}和${b}`)
 
 ```javascript
 function whiceDay(year, month, day) {
+  if ( day > 31 ) {
+    console.error('您输入的日期有误!')
+    return '您输入的日期有误'
+  }
   let daysArray = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
   if (isLeapYear(year)){
     return sum(daysArray, month - 1) + 1 + day
