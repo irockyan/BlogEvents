@@ -1,0 +1,17 @@
+body{
+  background-color: #ccc;
+}
+table{
+  margin: 100px auto;
+}
+tbody tr:hover{
+  background-color: #eee;
+}
+table td{
+  padding: 0 10px;
+}
+
+thead{
+  background-color: greenyellow;
+}
+

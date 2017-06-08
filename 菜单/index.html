@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>菜单</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+<body>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>
+          <input type="checkbox" class="totalSelect" />
+        </th>
+        <th>菜名</th>
+        <th>饭店名称</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>宫保鸡丁</td>
+        <td>昆仑饭店</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>有机菜花</td>
+        <td>昆仑饭店</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>地三鲜</td>
+        <td>昆仑饭店</td>
+      </tr>
+      <tr>
+        <td>
+          <input type="checkbox">
+        </td>
+        <td>木须肉</td>
+        <td>昆仑饭店</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    let totalSelect = document.querySelector('.totalSelect')
+    let singleArr = document.querySelectorAll('tbody input')
+    // 全选
+    totalSelect.addEventListener('click',function () {
+      for( let i = 0 ; i < singleArr.length ; i ++ ) {
+        singleArr[i].checked = this.checked
+      }
+    })
+
+    // 单选
+    for ( let i = 0 ; i < singleArr.length ; i ++ ) {
+      singleArr[i].addEventListener('click', function () {
+        let bool = true
+        for ( let j = 0 ; j < singleArr.length ; j ++ ) {
+          if( !singleArr[j] ) {
+            bool = false
+          }
+        }
+        totalSelect.checked = bool
+      })
+    }
+  </script>
+</body>
+</html>
