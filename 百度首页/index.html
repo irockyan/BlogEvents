@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>百度首页</title>
+  <link rel="stylesheet" href="./lib/styles/reset.css">
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+  <button type="button">换肤</button>
+  <div class="search">
+    <input type="text" /><input type="button" value="百度一下">
+  </div>
+  <div class="skin">
+    <nav>
+      <ul>
+        <li>雪山</li>
+        <li>远山</li>
+        <li>抽象</li>
+        <li>海边</li>
+        <li>植物</li>
+      </ul>
+    </nav>
+    <div class="pre">
+      <img src="./images/1.jpg" alt="图片">
+      <div class="pre-see">
+        <div class="search">
+          <input type="text" /><input type="button" value="百度一下">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    let lis = document.querySelectorAll('ul li')
+    let img = document.querySelector('img')
+    let skin =document.querySelector('.skin')
+    let presee = document.querySelector('.pre-see')
+    let btn =document.querySelector('button')
+    btn.addEventListener('click', function (evt) {
+      evt.stopPropagation()
+      skin.classList.add('ani')
+    })
+    document.documentElement.addEventListener('click', function (evt) {
+      skin.classList.remove('ani')
+    })
+    skin.addEventListener('click', function (evt) {
+      evt.stopPropagation()
+    })
+    for (let i = 0; i < lis.length; i++) {
+      lis[i].addEventListener('click', function () {
+        img.src = `./images/${i + 1}.jpg`
+      })
+    }
+
+    img.addEventListener('click', function () {
+      document.body.style.background = `url(${this.src}) no-repeat`
+    })
+    img.addEventListener('mouseover', function () {
+      presee.style.background = `url(${this.src}) no-repeat`
+      presee.style.backgroundSize = 'cover'
+    })
+  </script>
+</body>
+
+</html>
