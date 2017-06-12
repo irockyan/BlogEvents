@@ -10,10 +10,12 @@
   .search input:first-child{
     width: 537px;
     border: 1px solid #ccc;
+    font-size: 30px;
+    padding: 0 10px;
   }
   .search input:last-child{
     width: 100px;
-    border: 1px solid #ccc;
+    border: 1px solid #B2ABA5;
   }
 
   button{
@@ -84,5 +86,5 @@
   .pre-see .search input:last-child{
     height: 30px;
     width: 40px;
-    border: 1px solid #ccc;
+    border: 1px solid #B2ABA5;
   }
