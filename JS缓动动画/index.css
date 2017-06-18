@@ -1,0 +1,14 @@
+.Btn{
+  margin: 0 auto;
+  text-align: center;
+}
+.Btn button{
+  margin: 0 20px;
+}
+.box{
+  width: 100px;
+  height: 100px;
+  background-color: #f40;
+  position: absolute;
+  margin-top: 50px;
+}
