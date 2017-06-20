@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>轮播图</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .slideshow {
+      margin: 200px auto;
+      width: 490px;
+      height: 170px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+
+    ul {
+      width: 500%;
+      position: absolute;
+    }
+
+    li {
+      float: left;
+    }
+
+    .inner {
+      height: 170px;
+      width: 490px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .index {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+    .index li {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #fff;
+      text-align: center;
+      margin: 10px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .index .current {
+      background-color: darkorange;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slideshow">
+    <div class="inner">
+      <ul>
+        <li><img src="./images/01.jpg" alt=""></li>
+        <li><img src="./images/02.jpg" alt=""></li>
+        <li><img src="./images/03.jpg" alt=""></li>
+        <li><img src="./images/04.jpg" alt=""></li>
+        <li><img src="./images/05.jpg" alt=""></li>
+      </ul>
+      <ol class="index">
+        <li class="current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ol>
+    </div>
+  </div>
+  <script>
+    const ul = document.querySelector('ul')
+    const ol = document.querySelector('ol')
+    const olLis = ol.querySelectorAll('li')
+    const inner = document.querySelector('.inner')
+
+    for (let i = 0; i < olLis.length; i++) {
+      olLis[i].addEventListener('mouseover', function () {
+        for (let j = 0; j < olLis.length; j++) {
+          olLis[j].classList.remove('current')
+        }
+        this.classList.add('current')
+        animation(ul, -i * inner.offsetWidth)
+      })
+    }
+
+    function animation(ele, target) {
+      let time = 10
+      clearInterval(ele.timer)
+      ele.timer = setInterval(function () {
+        let error = target - ele.offsetLeft
+        let speed = error > 0 ? 10 : -10
+        ele.style.left = ele.offsetLeft + speed + 'px'
+        if (Math.abs(error) < Math.abs(speed)) {
+          ele.style.left = target + 'px'
+          clearInterval(ele.timer)
+        }
+      }, time)
+    }
+  </script>
+</body>
+
+</html>
