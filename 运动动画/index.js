@@ -19,7 +19,6 @@ function animation(ele, target) {
     let speed = errorLength > 0
       ? 10
       : -10
-      console.log(errorLength + 'n' + speed);
     ele.style.left = ele.offsetLeft + speed + 'px'
     if (Math.abs(errorLength) < Math.abs(speed)) {
       ele.style.left = target + 'px'

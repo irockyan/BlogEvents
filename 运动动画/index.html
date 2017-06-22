@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>缓动动画</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="Btn">
+    <button type="button">运动到200</button>
+    <button type="button">运动到400</button>
+  </div>
+  <div class="box">
+  </div>
+  <!--匀速运动动画-->
+  <!--<script src="./index.js"></script>-->
+  <!--缓动动画-->
+  <script src="./slowaction.js"></script>
+  <script>
+    let btn200 = document.querySelector('.Btn button:first-child')
+    let btn400 = document.querySelector('.Btn button:last-child')
+    let box = document.querySelector('.box')
+    btn200.addEventListener('click', function () {
+      slowAction(box, 200)
+    })
+    btn400.addEventListener('click', function () {
+      slowAction(box, 400)
+    })
+  </script>
+</body>
+
+</html>

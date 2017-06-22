@@ -25,7 +25,7 @@
     }
 
     ul {
-      width: 500%;
+      width: 600%;
       position: absolute;
     }
 
@@ -36,7 +36,7 @@
     .inner {
       height: 170px;
       width: 490px;
-      overflow: hidden;
+      /*overflow: hidden;*/
       position: relative;
     }
 
@@ -60,6 +60,32 @@
       background-color: darkorange;
       color: #fff;
     }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 100%;
+      display: none;
+    }
+
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
+    .left,
+    .right {
+      width: 50px;
+      height: 30px;
+      background-color: #ccc;
+      text-align: center;
+      line-height: 30px;
+    }
   </style>
 </head>
 
@@ -74,24 +100,79 @@
         <li><img src="./images/05.jpg" alt=""></li>
       </ul>
       <ol class="index">
-        <li class="current">1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
       </ol>
+      <div class="arrow">
+        <span class="left"><</span>
+        <span class="right">></span>
+      </div>
     </div>
   </div>
   <script>
     const ul = document.querySelector('ul')
     const ol = document.querySelector('ol')
-    const olLis = ol.querySelectorAll('li')
     const inner = document.querySelector('.inner')
+    const arrow = document.querySelector('.arrow')
+    const slideShow = document.querySelector('.slideshow')
+    const left = document.querySelector('.left')
+    const right = document.querySelector('.right')
+    let index = 0
+    let mark = 0
 
-    for (let i = 0; i < olLis.length; i++) {
-      olLis[i].addEventListener('mouseover', function () {
-        for (let j = 0; j < olLis.length; j++) {
-          olLis[j].classList.remove('current')
+
+    //生成第一个盒子放在最后
+    ul.appendChild(ul.children[0].cloneNode(true))
+    // 生成下标
+    for (let i = 0; i < ul.children.length-1; i++) {
+      let li = document.createElement('li')
+      li.innerHTML = `${i + 1}`
+      ol.appendChild(li)
+    }
+    ol.children[0].classList.add('current')
+
+    //悬浮显示左右切换
+    slideShow.addEventListener('mouseover', function () {
+      arrow.style.display = 'block'
+    })
+    slideShow.addEventListener('mouseleave', function () {
+      arrow.style.display = 'none'
+    })
+
+
+    left.addEventListener('click', function () {
+      if (index === 0) {
+        index = 5
+      }
+      index--
+      animation(ul, -index * inner.offsetWidth)
+      for (let j = 0; j < ol.children.length; j++) {
+        ol.children[j].classList.remove('current')
+      }
+      ol.children[index].classList.add('current')
+    })
+    
+    right.addEventListener('click', function () {
+      index++
+      mark++
+      console.log(`index是${index}`);
+      if (index === ul.children.length -1 ) {
+        mark = 0
+        index = 0
+        ul.style.left = 0
+      }
+      animation(ul, -index * inner.offsetWidth)
+      for (let j = 0; j < ol.children.length; j++) {
+        ol.children[j].classList.remove('current')
+      }
+      console.log(mark + '看看');
+      ol.children[mark].classList.add('current')
+    })
+
+
+    for (let i = 0; i < ol.children.length; i++) {
+      ol.children[i].addEventListener('mouseover', function () {
+        index = i
+        for (let j = 0; j < ol.children.length; j++) {
+          ol.children[j].classList.remove('current')
         }
         this.classList.add('current')
         animation(ul, -i * inner.offsetWidth)
