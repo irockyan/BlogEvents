@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>广告悬浮效果</title>
+    <style>
+        p {
+            text-align: center;
+        }
+        img{
+            position: absolute;
+            top: 80px;
+        }
+        img:last-of-type{
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/aside.jpg" alt="左边">
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <p>曾经沧海难为水，除却巫山不是云</p>
+    <img src="./images/aside.jpg" alt="右边">
+    <script>
+        let img1 = document.querySelector('img')
+        let img2 = document.querySelector('img:last-of-type')
+        window.onscroll = function () {
+            let sTop = document.body.scrollTop
+            slowAction(img1, sTop+80)
+            slowAction(img2, sTop+80)
+        }
+
+        function slowAction(ele, target) {
+            clearInterval(ele.timer)
+            ele.timer = setInterval(function () {
+                let step = (target - ele.offsetTop)/10
+                step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                ele.style.top = ele.offsetTop + step + 'px'
+                if(Math.abs(step) > Math.abs(target-ele.offsetTop)) {
+                    ele.style.top = target + 'px'
+                    clearInterval(ele.timer)
+                }
+            }, 20)
+        }
+    </script>
+</body>
+
+</html>
