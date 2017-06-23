@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>固定导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            text-align: center;
+            position: relative;
+        }
+
+        img{
+            display: block;
+        }
+        .main{
+            margin: 0 auto;
+        }
+        .mart {
+            margin-top: 83px;
+        }
+
+        .fix {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/top.png" alt="顶部图片" class="top">
+    <img src="./images/nav.png" alt="主要图片" class="nav">
+    <img src="./images/main.png" alt="顶部图片" class="main">
+    <script>
+        window.onload = function () {
+            let topImg = document.querySelector('.top')
+            let navImg = document.querySelector('.nav')
+            let mainImg = document.querySelector('.main')
+            let topImgHeight = topImg.offsetHeight
+            window.onscroll = function () {
+                console.log(document.body.scrollTop)
+                if (topImgHeight <= document.body.scrollTop) {
+                    navImg.classList.add('fix')
+                    mainImg.classList.add('mart')
+                } else {
+                    navImg.classList.remove('fix')
+                    mainImg.classList.remove('mart')
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
