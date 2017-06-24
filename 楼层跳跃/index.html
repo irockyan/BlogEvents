@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>楼层跳跃效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        ul {
+            height: 100%;
+        }
+
+        ul li {
+            height: 100%;
+        }
+
+        ol {
+            position: fixed;
+            top: 100px;
+            left: 100px;
+            background-color: #fff;
+        }
+
+        ol li {
+            width: 60px;
+            height: 30px;
+            line-height: 30px;
+            border: 1px solid #000;
+            text-align: center;
+            margin-top: -1px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>一楼</li>
+        <li>二楼</li>
+        <li>三楼</li>
+        <li>四楼</li>
+        <li>五楼</li>
+    </ul>
+    <ol>
+        <li>一楼</li>
+        <li>二楼</li>
+        <li>三楼</li>
+        <li>四楼</li>
+        <li>五楼</li>
+    </ol>
+    <script src="../运动动画/slowaction.js"></script>
+    <script>
+        const ul = document.querySelector('ul')
+        const liHeight = ul.children[0].offsetHeight
+        const ulLi = ul.children
+        const ol = document.querySelector('ol')
+        const olLi = ol.children
+        const colorArr = ['yellow', 'blue', 'green', 'orange', 'purple']
+        let leader = 0
+        let timer = 0
+        for (let i = 0; i < colorArr.length; i++) {
+            ulLi[i].style.background = colorArr[i]
+            olLi[i].addEventListener('click', function () {
+                clearInterval(timer)
+                timer = setInterval(function () {
+                    var target = ul.children[i].offsetTop
+                    var step = (target - leader) / 10
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step)
+                    leader = leader + step
+                    window.scrollTo(0, leader)
+                    if (Math.abs(step) > Math.abs(target - leader)) {
+                        window.scrollTo(0, target)
+                        clearInterval(timer)
+                    }
+                }, 10)
+            })
+        }
+
+        window.onscroll = function () {
+            leader = document.body.scrollTop
+        }
+    </script>
+</body>
+
+</html>

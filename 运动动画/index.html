@@ -25,10 +25,10 @@
     let btn400 = document.querySelector('.Btn button:last-child')
     let box = document.querySelector('.box')
     btn200.addEventListener('click', function () {
-      slowAction(box, 200)
+      slowAction(box, {length:200, direction: true})
     })
     btn400.addEventListener('click', function () {
-      slowAction(box, 400)
+      slowAction(box, {length:400, direction: true})
     })
   </script>
 </body>

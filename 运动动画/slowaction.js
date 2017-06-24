@@ -1,12 +1,14 @@
 function slowAction(ele, target) {
+    let dir = target.direction ? 'left' : 'top'
+    let direction =  target.direction ? 'offsetLeft' : 'offsetTop'
     clearInterval(ele.timer)
     ele.timer = setInterval(function () {
-        var errorLength = target - ele.offsetLeft
+        var errorLength = target.length - ele[direction]
         var step = errorLength/10
         step = step > 0 ? Math.ceil(step) : Math.floor(step)
-        ele.style.left = ele.offsetLeft + step + 'px'
+        ele.style[dir] = ele[direction] + step + 'px'
         if (Math.abs(errorLength) < Math.abs(step)) {
-            ele.style.left = target + 'px'
+            ele.style[dir] = target.length + 'px'
             clearInterval(timer)
         }
     }, 10)
