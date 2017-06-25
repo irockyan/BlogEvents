@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>鼠标跟随</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./images/img.jpg" alt="超人标志">
+    <script>
+        let img = document.querySelector('img')
+        let timer = null
+        document.onclick = function (evt) {
+            let pageX = evt.pageX - 50
+            let pageY = evt.pageY - 50
+            clearInterval(timer)
+            timer = setInterval(function () {
+                let stepX = (pageX - img.offsetLeft) / 10
+                let stepY = (pageY - img.offsetTop) / 10
+                stepX = stepX > 0 ? Math.ceil(stepX) : Math.floor(stepX)
+                stepY = stepY > 0 ? Math.ceil(stepY) : Math.floor(stepY)
+                img.style.left = img.offsetLeft + stepX + 'px'
+                img.style.top = img.offsetTop + stepY + 'px'
+                if(Math.abs(stepX) >= Math.abs(pageX - img.offsetLeft) && Math.abs(stepY) >= Math.abs(pageY - img.offsetTop)) {
+                    img.style.left = pageX + 'px'
+                    img.style.top = pageY + 'px'
+                    clearInterval(timer)
+                }
+            }, 10)
+        }
+    </script>
+</body>
+
+</html>
