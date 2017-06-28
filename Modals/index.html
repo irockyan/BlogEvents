@@ -11,17 +11,18 @@
 </head>
 
 <body>
+  <button class="popup">点击出现弹窗</button>
   <div class="modals c-disappear">
     <h1>提示</h1>
     <p>这里是一个提示框</p>
     <button type="button" class="know">知道了</button>
   </div>
-  <button class="popup">点击出现弹窗</button>
   <script src="./js/index.js">
 
 
   </script>
   <script>
+    document.body.removeChild
     const modal = new Modals('你知道什么是提示吗？这个就是提示！');
     modal.init();
     $('.popup').addEventListener('click', function () {
