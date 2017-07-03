@@ -86,3 +86,13 @@ footer{
     height: 70px;
     line-height: 70px;
 }
+
+
+article:first-of-type p:nth-of-type(2)::first-line{
+    color: blue;
+}
+article:first-of-type p:nth-of-type(2)::first-letter{
+    color: red;
+    font-size: 30px;
+    float: left;
+}
