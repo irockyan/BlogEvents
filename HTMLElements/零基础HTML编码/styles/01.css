@@ -1,0 +1,88 @@
+/*默认样式*/
+body{
+    background-color: #DEDEDE;
+}
+header{
+    background-color: #333;
+    height: 60px;
+    line-height: 60px;
+}
+header nav{
+    float: right;
+}
+header nav li {
+    float: left;
+}
+header  img{
+    width: 120px;
+    margin-left: 40px;
+}
+header li a{
+    color: #fff;
+    padding: 0 20px;
+}
+
+article,section,aside{
+    background-color: #fff;
+    margin: 20px;
+    padding: 40px 20px;
+}
+article img{
+    width: 300px;
+    height: 243px;
+}
+section div{
+    border: 1px solid #000;
+    width: 122px;
+    margin: 20px 0;
+    text-align: center;
+}
+section div h3{
+    display: inline-block;
+}
+section div img{
+    width: 100px;
+    margin: 10px;
+}
+
+/*表格*/
+table{
+    width: 100%;
+}
+thead{
+    background-color: #000;
+    color: #fff;
+}
+tr, td{
+    padding: 0;
+}
+
+aside form{
+    margin-left: 270px;
+}
+aside form div{
+    margin: 20px 0 30px 0;
+}
+aside h1{
+    border-left: 5px solid #ccc;
+}
+
+aside input{
+    border: 1px solid #ccc;
+}
+
+.eamil{
+    position: relative;
+}
+.eamildesc{
+    position: absolute;
+    top: 23px;
+    left: 134px;
+}
+footer{
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+    height: 70px;
+    line-height: 70px;
+}
