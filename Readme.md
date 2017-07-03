@@ -26,7 +26,7 @@
 
 ## 百度IFE练习
 
-1. [零基础HTML编码](./HTMLElements/01.html)
+1. [零基础HTML编码](./HTMLElements/零基础HTML编码/01.html)
 
 ## 博客专用
 
