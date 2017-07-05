@@ -7,6 +7,9 @@ body{
 
 h1{
   color: #333;
+  text-shadow: 6px 6px 5px #fff;
+  letter-spacing: 30px;
+  font-size: 50px;
 }
 
 a{
