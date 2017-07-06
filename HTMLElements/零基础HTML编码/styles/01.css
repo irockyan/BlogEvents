@@ -7,6 +7,9 @@ header{
     height: 60px;
     line-height: 60px;
 }
+main{
+    overflow: auto;
+}
 header nav{
     float: right;
 }
@@ -26,6 +29,9 @@ article,section,aside{
     background-color: #fff;
     margin: 20px;
     padding: 40px 20px;
+}
+article, section{
+    min-width: 450px;
 }
 article img{
     width: 300px;
@@ -57,27 +63,43 @@ tr, td{
     padding: 0;
 }
 
-aside form{
-    margin-left: 270px;
-}
 aside form div{
     margin: 20px 0 30px 0;
 }
 aside h1{
     border-left: 5px solid #ccc;
+    padding-left: 10px;
+    font-size: 20px;
 }
 
-aside input{
-    border: 1px solid #ccc;
-}
-
-.eamil{
+/*输入框组*/
+.input-box{
     position: relative;
 }
-.eamildesc{
+.input-box input{
+    border: 1px solid #ccc;
+    height: 18px;
+}
+.input-desc{
     position: absolute;
     top: 23px;
     left: 134px;
+    font-size: 14px;
+    color: #999;
+}
+.input-desc-pwd{
+    top: 45px;
+}
+.input-btn{
+    width: 318px;
+    height: 40px;
+    background-color: #3355D0;
+    display: block;
+    margin: 0 auto;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 footer{
     background-color: #000;
@@ -95,4 +117,23 @@ article:first-of-type p:nth-of-type(2)::first-letter{
     color: red;
     font-size: 30px;
     float: left;
+}
+
+.aside-right{
+    float: right;
+    width: 366px;
+}
+
+.aside-right label{
+    width: 100px;
+    text-align: right;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+/*图片展示*/
+section div{
+    float: left;
+    margin-left: 10px;
 }
