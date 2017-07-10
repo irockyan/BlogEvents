@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS实现安卓机器人</title>
+    <style>
+        .box {
+            width: 300px;
+            margin: 100px auto;
+        }
+
+        .body,
+        .header {
+            background-color: #A4C639;
+            margin: 0 auto;
+        }
+        /*头部*/
+        .header {
+            width: 100px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .header span {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .header span:first-of-type {
+            left: 30%;
+        }
+
+        .header span:nth-of-type(2) {
+            left: 60%;
+        }
+        /*身体*/
+        .body {
+            height: 80px;
+            width: 100px;
+            position: relative;
+            border-radius: 0 0 10px 10px;
+        }
+        .arm {
+            position: absolute;
+            height: 60px;
+            background-color: #A4C639;
+            width: 20px;
+            border-radius: 10px;
+            top: 0;
+        }
+        .arm-left {
+            left: -30%;
+        }
+        .arm-right {
+            right: -30%;
+        }
+
+        .leg{
+            width: 20px;
+            height: 40px;
+            background-color: #A4C639;
+            position: absolute;
+            top: 100%;
+            border-radius: 0 0 10px 10px;
+        }
+        .leg-left {
+            left: 20%;
+        }
+        .leg-right {
+            left: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="header">
+            <span></span>
+            <span></span>
+        </div>
+        <div class="body">
+            <span class="arm arm-left"></span>
+            <span class="arm arm-right"></span>
+            <span class="leg leg-left"></span>
+            <span class="leg leg-right"></span>
+        </div>
+    </div>
+</body>
+
+</html>
