@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+}
+div{
+    box-sizing:border-box;
+}
+p {
+    margin: 0;
+}
+.fluse {
+    width: 980px;
+    margin: 0 auto;
+}
+.cf::after,
+.cf::before {
+    content: '';
+    display: table;
+}
+.cf::after {
+    clear: both;
+}

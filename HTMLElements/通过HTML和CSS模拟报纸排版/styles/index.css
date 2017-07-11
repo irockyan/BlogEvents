@@ -1,0 +1,256 @@
+body{
+    background-color: #ccc;
+}
+/*主题布局*/
+.main-box {
+    padding: 0 44px;
+    background-color: #fff;
+}
+/*头部*/
+.header {
+    height: 61px;
+    border-bottom: 2px solid #938e8c;
+}
+.header span{
+    background-color: #d45d5c;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-family: SimHei;
+    width: 110px;
+    text-align: center;
+    vertical-align: super;
+    padding-top: 48px;
+}
+/*概览视图*/
+.overview-img {
+    height: 301px;
+    width: 641px;
+    position: relative;
+    margin-top: 35px;
+}
+.overview-img div {
+    width: 191px;
+    height: 301px;
+    opacity: .2;
+    position: absolute;
+    top: 0;
+}
+.overview-img div:first-child {
+    background-color: green;
+}
+.overview-img div:nth-child(3) {
+    background-color: pink;
+    right: 0;
+}
+.overview-aside {
+    float: right;
+    width: 203px;
+    border-top: 2px solid #cc8091;
+}
+.aside-title {
+    line-height: 40px;
+    font-size: 24px;
+    font-family: Microsoft YaHei;
+    text-decoration: underline;
+}
+.aside-title span {
+    font-size: 40px;
+}
+.aside-desc {
+    font-size: 12px;
+    line-height: 10px;
+    font-family: 楷体;
+}
+.aside-num {
+    font-size: 116px;
+    color: #75b86b;
+    text-decoration: underline;
+    font-style: italic;
+}
+.aside-some {
+    position: relative;
+}
+.aside-some span {
+    font-family: Microsoft YaHei;
+    color: #cc8091;
+}
+.aside-some span:first-child {
+    font-size: 55px;
+}
+.aside-some span:nth-child(2) {
+    font-size: 21px;
+    position: absolute;
+    left: 85px;
+    bottom: 20px;
+}
+.aside-some span:nth-child(3) {
+    font-size: 12px;
+    position: absolute;
+    left: 85px;
+    bottom: 10px;
+}
+
+/*文章*/
+.article {
+    position: relative;
+}
+.article article {
+    width: 195px;
+    float: left;
+    margin-right: 30px;
+}
+.article article h1{
+    font-weight: bold;
+    font-family: Microsoft YaHei;
+    text-decoration: underline;
+    font-size: 16px;
+}
+.article article p {
+    font-size: 16px;
+    color: #767777;
+    font-size: 12px;
+    line-height: 16px;
+    opacity: .7;
+}
+.article article:first-child h1{
+    color: #418c59;
+}
+.article article:nth-child(2) h1 {
+    color: #d2994f;
+}
+.article article:nth-child(3) h1 {
+    color: #cc7680;
+}
+.article article:nth-child(3) p span {
+    color: #cd4a48;
+}
+.aside-bottom {
+    position: absolute;
+    bottom: 0;
+}
+
+/*底部的数据*/
+.bottom {
+    margin-top: 70px;
+}
+hr{
+    margin: 20px 0;
+}
+.bottom-left, .bottom-right {
+    float: left;
+}
+.bottom-left {
+    width: 44%;
+}
+.bottom-left h1 span{
+    font-size: 72px;
+    color: #f5e327;
+    font-style: italic;
+    font-weight: bold;
+}
+.bottom-left h1 {
+    font-size: 42px;
+    color: #11456b;
+}
+.bottom-left h2 {
+    font-size: 33px;
+    color: #11456b;
+    border-bottom: 2px solid #11456b;
+    padding-bottom: 10px;
+}
+.bottom-left p::first-letter {
+    font-size: 70px;
+    color: #f5e327;
+    float: left;
+}
+.bottom-left p {
+    font-size: 12px;
+    line-height: 1.5;
+}
+.bottom-left p img {
+    width: 100px;
+    float: right;
+}
+.bottom-right {
+    margin-left: 26px;
+}
+.right-img {
+    position: relative;
+}
+.right-img p {
+    position: absolute;
+    bottom: 0;
+    width: 443px;
+    font-size: 12px;
+    color: #72b16a;
+    height: 44px;
+    line-height: 44px;
+    background-color: #000;
+    opacity: .7;
+    padding-left: 15px;
+}
+.right-img p span {
+    padding: 0 10px;
+    border-left: 2px solid #72b16a;
+    font-size: 26px;
+    color: #fff;
+}
+
+.right-date {
+    margin-top: 30px;
+    background-color: #eeedd6;
+    padding-top: 25px;
+    color: #5a5b5b;
+    font-size: 16px;
+    width: 461px
+}
+.right-date p {
+    line-height: 42px;
+    margin-left: 25px;
+}
+.date-day {
+    width: 262px;
+    height: 162px;
+    line-height: 162px;
+    background-color: #d45d5c;
+    float: left;
+}
+.date-day div:first-child {
+    font-size: 110px;
+    color: #fff;
+    float: left;
+    margin: 0 10px;
+}
+.line {
+    height: 86px;
+    width: 2px;
+    background-color: #fff;
+    float: left;
+    margin: 40px 0;
+}
+.date-day div:nth-child(3) {
+    float: left;
+    width: 174px;
+    margin-top: 38px;
+}
+.date-day div:nth-child(3) p {
+    padding: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+    line-height: 1.5;
+}
+.date-day div:nth-child(3) p:nth-child(-n+2) {
+    font-size: 16px;
+    color: #fff;
+    font-style: italic;
+}
+.date-day div:nth-child(3) p:nth-child(3) {
+    font-size: 12px;
+    color: #fff;
+}
+.right-date p:last-child {
+    font-style: italic;
+    font-size: 14px;
+    color: #5a5b5b;
+}
