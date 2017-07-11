@@ -29,7 +29,7 @@
 ## 百度IFE练习
 
 1. [零基础HTML编码](./HTMLElements/零基础HTML编码/01.html)
-1. [通过HTML和CSS模拟报纸排版](./HTMLElements/通过HTML和CSS模拟海报/index.html)
+1. [通过HTML和CSS模拟报纸排版](./HTMLElements/通过HTML和CSS模拟报纸排版/index.html)
 
 ## 博客专用
 
