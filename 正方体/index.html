@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>正方体</title>
+    <style>
+    .cube {
+        border: 1px dashed red;
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        transform-style: preserve-3d;
+        position: relative;
+        animation: role 8s linear infinite;
+    }
+    .cube_plane {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        opacity: 0.8;
+        text-align: center;
+        font-size: 40px;
+        line-height: 200px;
+        color: blueviolet;
+    }
+    .cube_plane_front {
+        transform: translateZ(100px);
+        background-color: yellow;
+    }
+    .cube_plane_end {
+        transform: translateZ(-100px);
+        background-color: blue;
+    }
+    .cube_plane_top {
+        background-color: yellowgreen;
+        transform: rotateX(90deg) translateZ(100px);
+    }
+    .cube_plane_bottom {
+        background-color: pink;
+        transform: rotateX(90deg) translateZ(-100px);
+    }
+    .cube_plane_left {
+        background-color: paleturquoise;
+        transform: rotateY(90deg) translateZ(100px);
+    }
+    .cube_plane_right {
+        background-color: peachpuff;
+        transform: rotateY(90deg) translateZ(-100px);
+    }
+    @keyframes role {
+        0% {
+            transform: rotateX(0) rotateY(0)
+        }
+        100% {
+            transform: rotateX(360deg) rotateY(360deg)
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="cube_plane cube_plane_front">1</div>
+        <div class="cube_plane cube_plane_end">2</div>
+        <div class="cube_plane cube_plane_top">3</div>
+        <div class="cube_plane cube_plane_bottom">4</div>
+        <div class="cube_plane cube_plane_left">5</div>
+        <div class="cube_plane cube_plane_right">6</div>
+    </div>
+</body>
+</html>

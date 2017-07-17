@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>太阳眩晕</title>
+    <style>
+        .box {
+            width: 200px;
+            margin: 100px auto;
+            position: relative;
+        }
+
+        .sun {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 200px;
+            width: 200px;
+            background-color: #f40;
+            opacity: .5;
+            transition: all 1s;
+        }
+
+        .sun:first-child {
+            transform: rotateZ(22.5deg);
+            animation: rotateo 12s infinite linear;
+        }
+
+        .sun:nth-child(2) {
+            transform: rotateZ(45deg);
+            animation: rotateo 12s infinite linear;
+        }
+
+        .sun:nth-child(3) {
+            transform: rotateZ(67.5deg)
+        }
+
+        .sun:nth-child(4) {
+            transform: rotateZ(90deg)
+        }
+
+        @keyframes rotateo {
+            from {
+                transform: rotate(22.5deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="sun"></div>
+        <div class="sun"></div>
+        <div class="sun"></div>
+        <div class="sun"></div>
+    </div>
+</body>
+
+</html>
