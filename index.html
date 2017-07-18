@@ -1,19 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Zyan的练习</title>
+    <style>
+        .css_title {
+            position: relative;
+            font-size: 40px;
+        }
+
+        .css_title::before,
+        .css_title::after {
+            transform-origin: left center;
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: 'CSS3练习';
+            transition: all 1s;
+        }
+
+        .css_title::before {
+            color: rgba(0, 0, 0, 0.3);
+        }
+
+        .css_title::after {
+            transform: rotateY(-10deg);
+            color: yellowgreen;
+        }
+
+        .css_title:hover::before {
+            transform: skew(0, 4deg);
+        }
+
+        .css_title:hover::after {
+            transform: rotateY(-20deg) skew(0, 1deg);
+        }
+    </style>
 </head>
+
 <body>
     <h1>写在前边</h1>
-    <section>
-        <h1>CSS3练习</h1>
+    <section class="css">
+        <h1 class="css_title">CSS3练习</h1>
         <a href="./heart/index.html">心形</a>
         <a href="./正方体/index.html">正方体</a>
         <a href="./音乐盒/index.html">音乐盒</a>
         <a href="./百度钱包/index.html">百度钱包</a>
     </section>
 </body>
+
 </html>
