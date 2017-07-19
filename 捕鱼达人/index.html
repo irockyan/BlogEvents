@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>捕鱼达人</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+
+        .sharkbox {
+            width: 509px;
+            height: 270px;
+            animation: swim2 10s linear infinite;
+        }
+
+        .shark {
+            width: 509px;
+            height: 270px;
+            background: url('./images/shark1.png') no-repeat;
+            animation: swim 1s steps(8) infinite;
+        }
+
+        .shark2 {
+            background: url('./images/shark2.png') no-repeat;
+            height: 240px;
+            animation: swim 1s steps(8) infinite;
+        }
+
+        @keyframes swim {
+            0% {}
+            100% {
+                background-position: left -2160px;
+            }
+        }
+
+        @keyframes swim2 {
+            0% {
+                transform: translateX(-600px);
+            }
+            100% {
+                transform: translateX(1280px);
+            }
+        }
+
+        .fishbox {
+            width: 177px;
+            height: 126px;
+            position: absolute;
+            animation: run 20s linear infinite;
+            top: 0;
+            left: 0;
+        }
+
+        .fish {
+            width: 177px;
+            height: 126px;
+            background: url('./images/fish8.png') no-repeat;
+             animation: fish 1s steps(8) infinite; 
+        }
+
+        @keyframes fish {
+            0% {}
+            100% {
+                background-position: left -1008px;
+            }
+        }
+
+        @keyframes run {
+            0% {
+                left: 0;
+                top: 0;
+            }
+
+            15% {
+                transform: rotate(45deg);
+                left: 100px;
+                top: 200px;
+            }
+            100% {
+                transform: rotate(135deg);
+                left: 300px;
+                top: 300px;
+            }
+ 
+             75% {
+                 transform: translate(0px, 0px) rotate(235deg); 
+            } 
+
+
+              100% {
+                 transform: translate(0px, 0px) rotate(360deg); 
+            }   
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sharkbox">
+        <div class="shark">
+        </div>
+    </div>
+    <div class="sharkbox">
+        <div class="shark shark2">
+        </div>
+    </div>
+    <div class="fishbox">
+        <div class="fish"></div>
+    </div>
+</body>
+
+</html>
