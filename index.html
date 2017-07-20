@@ -2,59 +2,33 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Zyan的练习</title>
-    <style>
-        .css_title {
-            position: relative;
-            font-size: 40px;
-        }
-
-        .css_title::before,
-        .css_title::after {
-            transform-origin: left center;
-            position: absolute;
-            left: 0;
-            top: 0;
-            content: 'CSS3练习';
-            transition: all 1s;
-        }
-
-        .css_title::before {
-            color: rgba(0, 0, 0, 0.3);
-        }
-
-        .css_title::after {
-            transform: rotateY(-10deg);
-            color: yellowgreen;
-        }
-
-        .css_title:hover::before {
-            transform: skew(0, 4deg);
-        }
-
-        .css_title:hover::after {
-            transform: rotateY(-20deg) skew(0, 1deg);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zyan的练习</title>
+  <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/index.css">
 </head>
 
 <body>
-    <h1>写在前边</h1>
-    <p> 1. CSS采用最新语法，BEM书写规范。</p>
-    <p>1. JS最新语法。</p>
-    <section class="css">
-        <h1 class="css_title">CSS3练习</h1>
-        <a href="./heart/index.html">心形</a>
-        <a href="./正方体/index.html">正方体</a>
-        <a href="./音乐盒/index.html">音乐盒</a>
-        <a href="./百度钱包/index.html">百度钱包</a>
-        <a href="./3D导航/index.html">3D导航</a>
-        <a href="./捕鱼达人/index.html">捕鱼达人</a>
-        <a href="./Gallery/index.html">图片画廊</a>
-    </section>
+  <h1>写在前边</h1>
+  <p> 1. CSS采用最新语法，BEM书写规范。</p>
+  <p>1. JS最新语法。</p>
+  <section class="css">
+    <h1 class="css_title">CSS3练习</h1>
+    <a class="event-link" href="./heart/index.html">心形</a>
+    <a class="event-link" href="./正方体/index.html">正方体</a>
+    <a class="event-link" href="./音乐盒/index.html">音乐盒</a>
+    <a class="event-link" href="./百度钱包/index.html">百度钱包</a>
+    <a class="event-link" href="./3D导航/index.html">3D导航</a>
+    <a class="event-link" href="./捕鱼达人/index.html">捕鱼达人</a>
+    <a class="event-link" href="./Gallery/index.html">图片画廊</a>
+  </section>
+  <section>
+    <h1>百度IFE练习</h1>
+    <a class="event-link" href="./HTMLElements/零基础HTML编码/01.html">零基础HTML编码</a>
+    <a class="event-link" href="./HTMLElements/通过HTML和CSS模拟报纸排版/index.html">通过HTML和CSS模拟报纸排版</a>
+  </section>
 </body>
 
 </html>
