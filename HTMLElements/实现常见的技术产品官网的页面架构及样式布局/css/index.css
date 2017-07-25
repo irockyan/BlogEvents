@@ -1,0 +1,82 @@
+/* 头部 */
+
+.header {
+  height: 55px;
+  line-height: 55px;
+}
+
+
+/* logo */
+
+.logo {
+  margin-left: 60px;
+  font-size: 21px;
+  color: #393a3a;
+  font-weight: bold;
+}
+
+.nav {
+  float: right;
+}
+
+.nav_list {
+  float: left;
+  height: 100%;
+  padding: 0 18px;
+  margin: 0 5px;
+  color: #999ba0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav_list_active {
+  border-bottom: 4px solid var(--baseColor);
+}
+
+.nav_list_login {
+  color: var(--baseColor);
+  margin: 0 70px;
+}
+
+/* banner */
+.banner {
+    background: url('../images/top_bg.png');
+    width: 100%;
+    height: 690px;
+    background-size: 100% 690px;
+    overflow: hidden;
+    position: relative;
+}
+.banner::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+}
+.banner_title {
+    font-size: 60px;
+    color: #fff;
+    margin-top: 230px;
+    margin-left: 115px;
+    line-height: 76px;
+}
+.banner_desc {
+    width: 300px;
+    line-height: 37px;
+    margin-left: 115px;
+    font-size: 21px;
+    color: #fff;
+}
+.banner_btn {
+    width: 330px;
+    height: 65px;
+    background-color: var(--baseColor);
+    font-size: 30px;
+    color: #fff;
+    margin-left: 115px;
+    margin-top: 55px;
+}
