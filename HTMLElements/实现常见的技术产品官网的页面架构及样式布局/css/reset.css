@@ -41,7 +41,8 @@ input {
 }
 
 button,
-div {
+div,
+li {
   box-sizing: border-box;
 }
 
