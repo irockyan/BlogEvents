@@ -1,0 +1,24 @@
+:root {
+  --baseColor: #e74f4d;
+}
+
+.line {
+  height: 2px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+
+.trangle {
+  border-width: 30px;
+  border-color: transparent;
+  border-style: solid;
+  display: inline-block;
+  border-right-color: #fff;
+}
+
+.btn {
+  width: 104px;
+  height: 34px;
+  border: 1px solid var(--baseColor);
+  background-color: transparent;
+}
