@@ -42,7 +42,9 @@ input {
 
 button,
 div,
-li {
+li,
+input,
+textarea {
   box-sizing: border-box;
 }
 
