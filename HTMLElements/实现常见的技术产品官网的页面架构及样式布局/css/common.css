@@ -22,3 +22,6 @@
   border: 1px solid var(--baseColor);
   background-color: transparent;
 }
+body {
+  min-width: 1280px;
+}
