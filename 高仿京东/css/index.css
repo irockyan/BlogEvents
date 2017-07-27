@@ -41,11 +41,12 @@
 .top-bar {
   height: 39px;
   padding: 0 46px 0 10px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: rgba(222, 24, 27, 0);
 }
 
 .top-bar_logo,
@@ -136,17 +137,17 @@
 
 .news_icon {
   position: absolute;
-  top: 5px;
+  top: 2px;
   left: 8px;
 }
 
 .news_icon img {
   width: 73px;
-  height: 16px;
+  height: 27px;
 }
 
 .news_list {
-  padding: 0 42px 0 75px;
+  padding: 0 105px 0 75px;
   overflow: hidden;
 }
 
@@ -154,11 +155,12 @@
   font-size: 12px;
   height: 16px;
   line-height: 16px;
-  margin-top: 7px;
+  margin-top: 8px;
 }
 
 .news_key {
-  color: #f20030;
+  color: #232326;
+  font-weight: bold;
   padding: 0 5px;
 }
 
@@ -172,8 +174,24 @@
   right: 8px;
   top: 7px;
   font-size: 12px;
-  color: #181818;
+  color: #f23030;
   border-left: 1px solid #ccc;
   padding: 1px;
-  padding-left: 3px;
+  padding-left: 5px;
+}
+.right_arrow {
+  width: 15px;
+  height: 15px;
+  background-color: #f23030;
+  display: inline-block;
+  color: #fff;
+  line-height: 15px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: bottom;
+}
+.count_down span{
+  padding: 0 2px;
+  border: 1px solid #dfdfdf;
+  color: #232326;
 }
