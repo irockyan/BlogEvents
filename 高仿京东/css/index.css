@@ -15,6 +15,11 @@
   width: 100%;
 }
 
+.banner {
+  display: flex;
+  width: 1000%;
+  transform: translateX(-10%);
+}
 
 /* 序号 */
 
@@ -34,7 +39,9 @@
   display: inline-block;
   margin: 0 4px;
 }
-
+.serial_list_active {
+  background-color: #fff; 
+}
 
 /* 顶部搜索栏 */
 
