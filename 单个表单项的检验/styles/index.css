@@ -39,3 +39,16 @@
     color: #aaa;
     left: 372px;
 }
+
+.input_err {
+    border: 1px solid red;
+}
+.ask_err {
+    color: red;
+}
+.input_true {
+    border: 1px solid yellowgreen;
+}
+.ask_true {
+    color: yellowgreen;
+}
