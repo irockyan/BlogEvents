@@ -1,36 +1,44 @@
-.css_title {
-  position: relative;
-  font-size: 40px;
+html,
+body {
+  height: 100%;
+}
+.container {
+  display: flex;
+  height: 100%;
+  background-color: #F5FCFF;
 }
 
-.css_title::before,
-.css_title::after {
-  transform-origin: left center;
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: 'CSS3练习';
-  transition: all 1s;
+/* 左侧 */
+.slider_left {
+  flex: 1;
+}
+.slider_left_item {
+  padding: 20px;
 }
 
-.css_title::before {
-  color: rgba(0, 0, 0, 0.3);
+/* 右侧 */
+.slider_right {
+  flex: 3;
+}
+.slider_right_item {
+  width: 100%;
+  height: 100%;
+  display: none;
+  counter-reset: indexN;
+  padding: 10px;  
+}
+.slider_right_item a {
+  padding-right: 20px;
+}
+.slider_right_item a::before {
+  counter-increment: indexN;
+  content: counter(indexN)'.  '
 }
 
-.css_title::after {
-  transform: rotateY(-10deg);
-  color: yellowgreen;
+/* 公共 */
+.show {
+  display: block;
 }
-
-.css_title:hover::before {
-  transform: skew(0, 4deg);
-}
-
-.css_title:hover::after {
-  transform: rotateY(-20deg) skew(0, 1deg);
-}
-
-.event-link {
-  display: inline-block;
-  padding: 10px;
+.hide {
+  display: none;
 }
