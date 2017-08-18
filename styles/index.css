@@ -7,7 +7,10 @@ body {
   height: 100%;
   background-color: #F5FCFF;
 }
-
+iframe {
+  width: 100%;
+  height: 100%;
+}
 /* 左侧 */
 .slider_left {
   flex: 1;
@@ -18,14 +21,13 @@ body {
 
 /* 右侧 */
 .slider_right {
-  flex: 3;
+  flex: 4;
 }
 .slider_right_item {
   width: 100%;
   height: 100%;
   display: none;
   counter-reset: indexN;
-  padding: 10px;  
 }
 .slider_right_item a {
   padding-right: 20px;
