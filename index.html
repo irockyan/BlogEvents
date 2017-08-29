@@ -5,71 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>主页</title>
   <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/index.css">
-  <title>Zyan</title>
+  <link rel="stylesheet" href="./styles/main.css">
 </head>
 
 <body>
-  <div class="container">
-    <ul class="slider slider_left">
-      <li class="slider_left_item">主页</li>
-      <li class="slider_left_item">写在前边</li>
-      <li class="slider_left_item">CSS3练习</li>
-      <li class="slider_left_item">百度IFE练习</li>
-      <li class="slider_left_item">布局练习</li>
-      <li class="slider_left_item">JavaScript模式</li>
-      <li class="slider_left_item">具体功能的demo</li>
-      <li class="slider_left_item">收藏</li>
+  <header class="header">
+    <nav class="container header_container">
+      <h1 class="header_title">Zyan</h1>
+      <ul class="nav">
+        <li class="nav_list">关于</li>
+        <li class="nav_list">项目</li>
+        <li class="nav_list">技术介绍</li>
+      </ul>
+    </nav>
+  </header>
+  <section id="about" class="container about">
+    <p class="about_desc">我是Zyan，一名正在不断学习的前端工程师。现在所有的作品都不兼容IE8-。</p>
+    <img src="./images/WechatIMG4.jpeg" alt="杀生丸" class="about_image">
+  </section>
+  <section class="container products">
+    <h1 class="products_title">项目展示</h1>
+    <hr class="line">
+    <ul class="products_all">
+      <li class="products_items">
+        <a href="https://baidu.com">
+          <img src="./images/WechatIMG4.jpeg" alt="项目背景图">
+          <div class="products_items_desc">
+            <h1>CSS3练习</h1>
+            <p>这个项目集里写了平时看到的和用到的CSS3技巧和样式</p>
+          </div>
+        </a>
+      </li>
+      <li class="products_items">
+        <a href="https://baidu.com">
+          <img src="./images/WechatIMG4.jpeg" alt="项目背景图">
+          <div class="products_items_desc">
+            <h1>CSS3练习</h1>
+            <p>这个项目集里写了平时看到的和用到的CSS3技巧和样式</p>
+          </div>
+        </a>
+      </li>
+      <li class="products_items">
+        <a href="https://baidu.com">
+          <img src="./images/WechatIMG4.jpeg" alt="项目背景图">
+          <div class="products_items_desc">
+            <h1>CSS3练习</h1>
+            <p>这个项目集里写了平时看到的和用到的CSS3技巧和样式</p>
+          </div>
+        </a>
+      </li>
+      <li class="products_items">
+        <a href="https://baidu.com">
+          <img src="./images/WechatIMG4.jpeg" alt="项目背景图">
+          <div class="products_items_desc">
+            <h1>CSS3练习</h1>
+            <p>这个项目集里写了平时看到的和用到的CSS3技巧和样式</p>
+          </div>
+        </a>
+      </li>
     </ul>
-    <div class="slider slider_right">
-      <!-- 主页 -->
-      <section class="slider_right_item show">
-        <iframe src="./main.html" frameborder="0"></iframe>
-      </section>
-      <!-- 写在前边 -->
-      <section class="slider_right_item">
-        <p> 1. CSS采用最新语法，BEM书写规范。</p>
-        <p>1. JS最新语法。</p>
-      </section>
-      <!-- CSS3练习 -->
-      <section class="slider_right_item">
-        <a class="event-link" href="./heart/index.html">心形</a>
-        <a class="event-link" href="./正方体/index.html">正方体</a>
-        <a class="event-link" href="./音乐盒/index.html">音乐盒</a>
-        <a class="event-link" href="./百度钱包/index.html">百度钱包</a>
-        <a class="event-link" href="./3D导航/index.html">3D导航</a>
-        <a class="event-link" href="./捕鱼达人/index.html">捕鱼达人</a>
-        <a class="event-link" href="./Gallery/index.html">图片画廊</a>
-      </section>
-      <!-- 百度IFE练习 -->
-      <section class="slider_right_item">
-        <a class="event-link" href="./HTMLElements/零基础HTML编码/01.html">零基础HTML编码</a>
-        <a class="event-link" href="./HTMLElements/通过HTML和CSS模拟报纸排版/index.html">通过HTML和CSS模拟报纸排版</a>
-        <a class="event-link" href="./HTMLElements/实现常见的技术产品官网的页面架构及样式布局/index.html">实现常见的技术产品官网的页面架构及样式布局</a>
-        <a class="event-link" href="./HTMLElements/实现栅格化布局/index.html">实现栅格化布局</a>
-        <a class="event-link" href="./表单检验/index.html">表单检验</a>
-      </section>
-      <!-- 布局练习 -->
-      <section class="slider_right_item">
-        <a class="event-link" href="./菜单/index.html">菜单</a>
-        <a class="event-link" href="./高仿京东/index.html">手机京东</a>
-      </section>
-      <!-- JavaScript模式 -->
-      <section class="slider_right_item">
-        <a class="event-link" href="./模式/构造器模式">构造器模式</a>
-      </section>
-      <!-- 具体功能的demo -->
-      <section class="slider_right_item">
-        <a class="event-link" href="https://github.com/irockyan/BlogEvents/tree/master/upload">express+ajax无刷新上传图片</a>
-      </section>
-      <!-- 收藏 -->
-      <section class="slider_right_item">
-        <a class="event-link" href="https://github.com/HackerNews/API">HackerNews官方API</a>
-      </section>
-    </div>
-  </div>
-  <script src="./scripts/index.js"></script>
+  </section>
+  <section></section>
+  <footer class="footer">Zyan&nbsp;&copy;&nbsp;2017.&nbsp;All Rights Reversed</footer>
 </body>
 
 </html>
