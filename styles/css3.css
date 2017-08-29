@@ -1,0 +1,41 @@
+body {
+  text-align: center;
+}
+.box {
+  overflow: hidden;
+  perspective: 800px;
+  perspective-origin: 50% 50%;
+  margin-top: 100px;
+}
+.box_events {
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  transform-style: preserve-3d;
+  text-align: left;
+}
+.box_events a {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 90px;
+  line-height: 400px;
+  transform-origin: bottom;
+  background-color: black;
+  transition: transform 1s linear;
+}
+.a_other {
+  transform: rotateX(90deg);
+}
+.btn {
+  width: 90px;
+  height: 30px;
+  margin-top: 30px;
+}
+.btn_next {
+  margin-right: 20px;
+}
