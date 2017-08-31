@@ -87,7 +87,7 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.1);
   transition: all 2s;
   padding: 20px;
   color: #fff;
@@ -95,20 +95,20 @@ body {
 }
 .products_items_desc p {
   transition: all 1s;
+  line-height: 30px;
   margin-top: 10px;
   background-color: #fff;
   color: transparent;
   height: 4px;
+  padding-left: 10px;
 }
 .products_items_desc:hover {
-  background-color: rgba(0, 0, 0, 0.5);  
+  background-color: rgba(0, 0, 0, 0.4);  
 }
 .products_items_desc:hover p {
   background-color: #fff;
   color: #777;
-  margin-top: 20px;
-  height: auto;
-  padding: 10px;
+  height: 30px;
 }
 /* 底部 */
 .footer {
