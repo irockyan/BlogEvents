@@ -1,0 +1,48 @@
+h1 {
+  text-align: center;
+  padding: 30px;
+}
+.animation {
+  height: 50vh;
+  background-color: #eee;
+  padding: 20px;
+  margin-bottom: 50px;
+  display: flex;
+}
+.box,
+.desc {
+  flex: 1;
+}
+/* 第一个动画 */
+.animation_strike {
+  position: relative;
+}
+.block,
+.wall {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.block {
+  left: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 20px solid #fff;
+  animation: strike 4s infinite ease-out;
+}
+.wall {
+  left: 500px;
+  height: 200px;
+  width: 40px;
+  background-color: #000;
+}
+
+@keyframes strike {
+  0%, 15% {
+    opacity: 0;
+  }
+  /* 15%, 25% {
+    transform: translateX(40px);
+  } */
+}

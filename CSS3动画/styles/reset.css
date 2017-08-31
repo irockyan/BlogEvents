@@ -1,0 +1,76 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+p,
+dd {
+  margin: 0;
+}
+
+ul,
+ol,
+input,
+button {
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  resize: none;
+}
+
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+div,
+li,
+input,
+textarea,
+section {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+body {
+  font-family: Helvetica, Tahoma, Arial, “Microsoft YaHei”, “微软雅黑”, SimSun, “宋体”, STXihei, “华文细黑”, Heiti, “黑体”, sans-serif
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.cf::before,
+.cf::after {
+  content: '';
+  display: table;
+}
+
+.cf::after {
+  clear: both;
+}
