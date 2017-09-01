@@ -24,10 +24,10 @@ h1 {
   transform: translateY(-50%);
 }
 .block {
-  left: 100px;
+  left: 200px;
   width: 100px;
   height: 100px;
-  background-color: lightblue;
+  background-color: #2D97DB;
   border: 20px solid #fff;
   animation: strike 4s infinite ease-out;
 }
@@ -42,7 +42,25 @@ h1 {
   0%, 15% {
     opacity: 0;
   }
-  /* 15%, 25% {
-    transform: translateX(40px);
-  } */
+  15%, 25% {
+    transform: translateX(-20px);
+    top: calc(50% - 50px);
+    height: 100px;
+    width: 100px;
+    animation-timing-function: cubic-bezier(1,-1.92,.95,.89);
+  }
+  35%, 45% {
+    top: calc(50% - 60px);
+    transform: translateX(220px);
+    height: 120px;
+    width: 80px;
+    animation-timing-function: linear;
+    opacity: 1;
+  }
+  70%, 100% {
+    transform: translateX(220px) translateY(100px);
+    height: 120px;
+    width: 80px;
+    opacity: 0;
+  }
 }
