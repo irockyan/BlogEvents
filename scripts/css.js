@@ -1,3 +1,5 @@
+
+
 class Page {
   constructor(as) {
     this.currentIndex = 1

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>径向变化</title>
+  <style>
+    body {
+      background-color: #292a38;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    .box {
+      height: 200px;
+      width: 200px;
+      margin: 0 auto;
+      position: relative;
+      border: 2px dashed #fff;
+      border-radius: 50%;
+    }
+
+    .point {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      background-color: blue;
+      text-align: center;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+
+    .nav {
+      width: 200px;
+      height: 200px;
+      transform: scale(0);
+      transition: all .5s;
+      opacity: 0;
+      position: relative;
+    }
+
+    .active {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .nav_item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      background-color: pink;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>径向动画菜单效果示意</h1>
+  <div class="box">
+    <nav class="nav">
+      <a class="nav_item">1</a>
+      <a class="nav_item">2</a>
+      <a class="nav_item">3</a>
+      <a class="nav_item">4</a>
+      <a class="nav_item">5</a>
+      <a class="nav_item">6</a>
+    </nav>
+    <a class="point">点我</a>
+  </div>
+  <script>
+    let a = document.querySelector('.point')
+    let nav = document.querySelector('.nav')
+    let di = false
+
+    //求导航块的夹角
+    let gap = Math.PI * 2 / nav.children.length
+    let r = 100
+    let x = 0
+    let y = 0
+    for (let i = 0; i < nav.children.length; i++) {
+      x = r * Math.sin(gap*i) + r
+      y = r - r * Math.cos(gap*i)
+      nav.children[i].style.left = x + 'px'
+      nav.children[i].style.top = y + 'px'
+    }
+
+    a.onclick = (evt) => {
+      evt.preventDefault()
+      nav.classList.toggle('active')
+    }
+
+  </script>
+</body>
+
+</html>
