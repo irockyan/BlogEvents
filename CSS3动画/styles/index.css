@@ -2,6 +2,7 @@ h1 {
   text-align: center;
   padding: 30px;
 }
+
 .animation {
   height: 50vh;
   background-color: #eee;
@@ -9,20 +10,26 @@ h1 {
   margin-bottom: 50px;
   display: flex;
 }
+
 .box,
 .desc {
   flex: 1;
 }
+
+
 /* 第一个动画 */
+
 .animation_strike {
   position: relative;
 }
+
 .block,
 .wall {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .block {
   left: 200px;
   width: 100px;
@@ -31,6 +38,7 @@ h1 {
   border: 20px solid #fff;
   animation: strike 4s infinite ease-out;
 }
+
 .wall {
   left: 500px;
   height: 200px;
@@ -39,17 +47,20 @@ h1 {
 }
 
 @keyframes strike {
-  0%, 15% {
+  0%,
+  15% {
     opacity: 0;
   }
-  15%, 25% {
+  15%,
+  25% {
     transform: translateX(-20px);
     top: calc(50% - 50px);
     height: 100px;
     width: 100px;
-    animation-timing-function: cubic-bezier(1,-1.92,.95,.89);
+    animation-timing-function: cubic-bezier(1, -1.92, .95, .89);
   }
-  35%, 45% {
+  35%,
+  45% {
     top: calc(50% - 60px);
     transform: translateX(220px);
     height: 120px;
@@ -57,10 +68,51 @@ h1 {
     animation-timing-function: linear;
     opacity: 1;
   }
-  70%, 100% {
+  70%,
+  100% {
     transform: translateX(220px) translateY(100px);
     height: 120px;
     width: 80px;
     opacity: 0;
+  }
+}
+
+
+/* 中空小球转动 */
+
+.animation_hollow {
+  display: flex;
+}
+
+.hollow {
+  animation: hollowLoading 1.25s infinite;
+  background-color: #34495e;
+  height: 100px;
+  margin: auto;
+  width: 100px;
+}
+
+.small_hollow {
+  animation: smallHollowLoading 1.25s ease-in-out infinite alternate;
+  background-color: #ececec;
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes hollowLoading {
+  0% {
+    transform: rotateZ(0deg)
+  }
+  100% {
+    transform: rotateZ(90deg)
+  }
+}
+
+@keyframes smallHollowLoading {
+  0% {
+    transform: scale(.2)
+  }
+  100% {
+    transform: scale(.75)
   }
 }
