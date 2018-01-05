@@ -1,38 +1,32 @@
+.box {
+    position: relative;
+    padding: 100px;
+    text-align: center;
+}
+
+.box:hover .img:first-child {
+    transform: translateX(-50%) rotateZ(25deg);
+}
+
+.box:hover .img:nth-child(3) {
+    transform: translateX(-50%) rotateZ(-25deg);
+}
+
 .img {
-  width: 150px;
-  height: 440px;
-  background: url('../images/1.gif');
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
+    border: 10px solid #ccc;
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    width: 300px;
+    transform: translateX(-50%);
+    transform-origin: center 400px;
+    transition: all 700ms ease;
 }
 
-.img::after {
-  transition: all .8s;
-  background: url('../images/2.gif');
-  transform: rotate(90deg);
-  transform-origin: left bottom;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+.img:first-child {
+    transform: translateX(-50%) rotateZ(5deg);
 }
 
-.img:hover::after {
-  transform: rotate(0);
-}
-
-.right::after {
-    transform-origin: right bottom;
-}
-.top::after {
-    transform-origin: left top;
-}
-.bottom::after {
-    transform-origin: right bottom;
-}
-.left::after {
-    transform-origin: left bottom;
+.img:nth-child(3) {
+    transform: translateX(-50%) rotateZ(-5deg)
 }
